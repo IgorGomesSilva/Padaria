@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CasaDoPao.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Cadastrar Clientes</h3>
+<img src="~/Imagem/usuario.jpg" width="200" height="150"/>
+<p>
+    @Html.ActionLink("Novo Cliente", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCliente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCliente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCliente })
+        </td>
+    </tr>
+}
+
+</table>

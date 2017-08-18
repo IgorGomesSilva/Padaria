@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CasaDoPao.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Cadastrar Produto </h3>
+<img src="~/Imagem/pao.jpg" width="300" height="150" />
+<p>
+    @Html.ActionLink("Novo Produto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeProduto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProduto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProduto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProduto })
+        </td>
+    </tr>
+}
+
+</table>

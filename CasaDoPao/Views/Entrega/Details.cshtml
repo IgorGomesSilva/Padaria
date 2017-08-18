@@ -1,0 +1,82 @@
+﻿@model CasaDoPao.ViewModel.Entrega
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Entrega</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto01)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto01)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto02)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto02)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto03)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto03)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroCasa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroCasa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idEntrega }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
